@@ -1,0 +1,283 @@
+/* geral */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
+}
+
+/* set geral font size */
+html {
+  font-size: 10px;
+}
+
+/* variables */
+:root {
+  --grey: #616161;
+  --green: #02a28f;
+  --white: #fff;
+  --asideShadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+  --mainShadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  justify-items: center;
+}
+
+p,
+a {
+  font-size: 1.6rem;
+}
+h1 {
+  font-size: 3.6rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2rem;
+}
+span {
+  font-weight: bold;
+}
+
+/* header */
+header {
+  width: 100%;
+  background-color: var(--green);
+  height: 7rem;
+  color: var(--white);
+  justify-items: center;
+}
+header > h1 {
+  height: 100%;
+  width: 113rem;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+/* main */
+main {
+  width: 113rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 5rem 0 6.5rem 0;
+  gap: 2.4rem;
+}
+
+/* article */
+article {
+  width: 100%;
+  height: 45rem;
+  border-radius: 1rem;
+  background-image: url(/img/articleBg.jpg);
+  background-size: cover;
+  position: relative;
+  align-content: end;
+}
+#gradient {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, rgba(102, 102, 102, 0) 0%, #000000 100%);
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+#articleText {
+  position: relative;
+  color: var(--white);
+  margin: 0 0 2.4rem 2.4rem;
+}
+
+/* post */
+#title {
+  height: 5.6rem;
+  border-radius: 0.8rem;
+  background-color: var(--green);
+  color: var(--white);
+  padding: 0 2.4rem;
+  margin-top: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#title a {
+  color: var(--white);
+}
+
+/* Cards */
+#cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.4rem;
+  padding-top: 1rem;
+}
+.card {
+  height: 40rem;
+}
+.cardImg-1,
+.cardImg-2,
+.cardImg-3,
+.cardImg-4 {
+  width: 100%;
+  height: 50%;
+  border-radius: 1.6rem 1.6rem 0 0;
+  background-size: cover;
+  background-position: center;
+}
+.cardImg-1 {
+  background-image: url(/img/cardImg-1.jpg);
+}
+.cardImg-2 {
+  background-image: url(/img/cardImg-2.jpg);
+}
+.cardImg-3 {
+  background-image: url(/img/cardImg-3.jpg);
+}
+.cardImg-4 {
+  background-image: url(/img/cardImg-4.jpg);
+}
+
+.cardText {
+  height: calc(50% - 3rem);
+  padding: 1.5rem 1.6rem;
+  display: grid;
+  align-content: space-between;
+  border-radius: 0 0 1.6rem 1.6rem;
+  box-shadow: var(--mainShadow);
+}
+.cardText > p {
+  font-size: 1.4rem;
+}
+.category {
+  color: var(--green);
+}
+.cardAuthor,
+.cardDate {
+  color: var(--grey);
+}
+
+/* aside */
+.title,
+.title-2 {
+  background-color: var(--green);
+  color: var(--white);
+  width: 100%;
+  height: 4.8rem;
+  border-radius: 1rem;
+  align-content: center;
+}
+.title > h3,
+.title-2 > h3 {
+  padding-left: 2.4rem;
+}
+
+.asideCard {
+  display: flex;
+  height: 9.6rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--asideShadow);
+}
+.asideCard > img {
+  width: 13.2rem;
+  height: 7rem;
+  margin: 1.3rem 1.2rem;
+  background-color: var(--grey);
+  border-radius: 1rem;
+}
+.asideText {
+  margin-top: 1.3rem;
+}
+.asideTitle {
+  font-size: 1.4rem;
+}
+.asideDate {
+  font-size: 1.2rem;
+  color: var(--grey);
+}
+.title-2 {
+  margin-top: 2.4rem;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.4rem;
+}
+li > p {
+  font-size: 1.6rem;
+}
+
+/* footer */
+footer {
+  background-color: var(--green);
+  color: var(--white);
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer > p {
+  font-size: 1.4rem;
+}
+
+/* responsive */
+
+/* medium */
+@media (max-width: 1200px) {
+  header > h1 {
+    width: 80rem;
+  }
+
+  main {
+    width: 80rem;
+    grid-template-columns: 1fr;
+  }
+
+  aside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.4rem;
+  }
+
+  .title-2 {
+    margin-top: 0;
+  }
+}
+
+/* low */
+@media (max-width: 850px) {
+  header > h1 {
+    width: 36.8rem;
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  main {
+    width: 36.8rem;
+  }
+
+  #articleText > h2 {
+    font-size: 2.4rem;
+  }
+
+  #title {
+    height: 4.8rem;
+  }
+
+  #cards {
+    grid-template-columns: 1fr;
+  }
+
+  aside {
+    grid-template-columns: 1fr;
+  }
+
+  .title > h3,
+  .title-2 > h3 {
+    padding-left: 0rem;
+    text-align: center;
+  }
+}
